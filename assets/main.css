@@ -1,0 +1,31 @@
+.mma-promo {
+    height: 100dvh;
+    background-color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mma-promo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+.mma-promo-title > h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+    color: var(--white);
+}
+.mma-promo-description > p {
+    font-size: 1.125rem;
+    text-align: center;
+}
+.mma-promo-button > button {
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--turquoise);
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
+    color: var(--white);
+}

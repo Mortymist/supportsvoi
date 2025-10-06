@@ -1,0 +1,86 @@
+/* Импорт шрифтов ..., ... */
+/* @import url(''); */
+
+:root {
+    --white: rgba(255, 255, 255, 1);
+
+    --black: rgba(0, 0, 0, 1);
+
+    --orange: rgba(217, 125, 85, 1);
+
+    --beige: rgba(244, 233, 215, 1);
+    
+    --green: rgba(184, 196, 169, 1);
+
+    --turquoise: rgba(111, 164, 175, 1);
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--white);
+    background-color: var(--beige);
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+button, input {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    border: none;
+}
+
+button {
+    user-select: none;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 1.25rem
+}
+
+@media (width >= 40rem) {
+    .container {
+        max-width: 40rem
+    }
+}
+
+@media (width >= 48rem) {
+    .container {
+        max-width: 48rem
+    }
+}
+
+@media (width >= 64rem) {
+    .container {
+        max-width: 64rem
+    }
+}
+
+@media (width >= 80rem) {
+    .container {
+        max-width: 80rem
+    }
+}
+
+@media (width >= 96rem) {
+    .container {
+        max-width: 100rem
+    }
+}
