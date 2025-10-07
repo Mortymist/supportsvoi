@@ -5,3 +5,5 @@ const mainButton = document.querySelector('#main-button');
 const mainButtonClickCallback = (e) => {
     requestContact();
 };
+
+mainButton.addEventListener('click', mainButtonClickCallback);
