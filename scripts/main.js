@@ -1,3 +1,7 @@
-const { BackButton } = window.WebApp;
+const { BackButton, requestContact } = window.WebApp;
 
-BackButton.isVisible = false;
+const mainButton = document.querySelector('#main-button');
+
+const mainButtonClickCallback = (e) => {
+    requestContact();
+};
