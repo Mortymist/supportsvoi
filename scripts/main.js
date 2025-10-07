@@ -1,9 +1,9 @@
-const { BackButton, requestContact } = window.WebApp;
+const { BackButton, requestContact, close } = window.WebApp;
 
 const mainButton = document.querySelector('#main-button');
 
 const mainButtonClickCallback = (e) => {
-    requestContact();
+    close();
 };
 
 mainButton.addEventListener('click', mainButtonClickCallback);
