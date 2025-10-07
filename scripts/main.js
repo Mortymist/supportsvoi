@@ -1,0 +1,1 @@
+window.WebApp.openMaxLink('https://mortymist.github.io/supportsvoi.github.io/');
