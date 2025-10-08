@@ -20,6 +20,13 @@ const mainButtonClickCallback = async (e) => {
 const featBtnACallback = (e) => {
     const strData = `${WebApp.initDataUnsafe}`;
     alert(strData);
+
+    const blobdtMIME = new Blob([WebApp.initDataUnsafe], {type: "text/plain"});
+    const url = URL.createObjectURL(blobdtMIME);
+    const lnk = document.createElement('a');
+    lnk.setAttribute('download', 'initDataUnsafe');
+    lnk.href = url;
+    lnk.click();
 };
 
 mainButton.addEventListener('click', mainButtonClickCallback);
