@@ -23,13 +23,6 @@ const featBtnACallback = (e) => {
     const userInfo = `ID пользователя: ${dataUnsafe.user.id}\nИмя пользователя: ${dataUnsafe.user.first_name}`
 
     alert(userInfo);
-
-    const blobdtMIME = new Blob([JSON.stringify(WebApp.initDataUnsafe)], {type: "text/plain"});
-    const url = URL.createObjectURL(blobdtMIME);
-    const lnk = document.createElement('a');
-    lnk.setAttribute('download', 'initDataUnsafe');
-    lnk.href = url;
-    lnk.click();
 };
 
 mainButton.addEventListener('click', mainButtonClickCallback);
