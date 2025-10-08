@@ -1,6 +1,9 @@
 const { BackButton, platform } = window.WebApp;
 BackButton.visible = true;
 console.log(window.WebApp);
+await WebApp.ScreenCapture.disableScreenCapture();
+await WebApp.requestScreenMaxBrightness();
+
 
 const mainButton = document.querySelector('#main-button');
 const textElement = document.querySelector('.mma-promo-description > p');
