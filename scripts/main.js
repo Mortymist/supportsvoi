@@ -18,8 +18,11 @@ const mainButtonClickCallback = async (e) => {
 };
 
 const featBtnACallback = (e) => {
-    const strData = JSON.stringify(WebApp.initDataUnsafe);
-    alert(strData);
+    const dataUnsafe = WebApp.initDataUnsafe;
+    const strDataUnsafe = JSON.stringify(dataUnsafe);
+    const userInfo = `ID пользователя: ${dataUnsafe.user.id}\nИмя пользователя: ${dataUnsafe.user.first_name}`
+
+    alert(userInfo);
 
     const blobdtMIME = new Blob([JSON.stringify(WebApp.initDataUnsafe)], {type: "text/plain"});
     const url = URL.createObjectURL(blobdtMIME);
