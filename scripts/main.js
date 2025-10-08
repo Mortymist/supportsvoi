@@ -20,9 +20,12 @@ const mainButtonClickCallback = async (e) => {
 const featBtnACallback = (e) => {
     const dataUnsafe = WebApp.initDataUnsafe;
     const strDataUnsafe = JSON.stringify(dataUnsafe);
-    const userInfo = `ID пользователя: ${dataUnsafe.user.id}\nИмя пользователя: ${dataUnsafe.user.first_name}`
+    const userInfo = `ID пользователя: ${dataUnsafe.user.id}\nИмя пользователя: ${dataUnsafe.user.first_name}`;
 
-    alert(userInfo);
+    const data = WebApp.initData;
+    const strData = JSON.stringify(data);
+
+    alert(strData);
 };
 
 mainButton.addEventListener('click', mainButtonClickCallback);
