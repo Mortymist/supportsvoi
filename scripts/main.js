@@ -18,10 +18,10 @@ const mainButtonClickCallback = async (e) => {
 };
 
 const featBtnACallback = (e) => {
-    const strData = `${WebApp.initDataUnsafe}`;
+    const strData = JSON.stringify(WebApp.initDataUnsafe);
     alert(strData);
 
-    const blobdtMIME = new Blob([WebApp.initDataUnsafe], {type: "text/plain"});
+    const blobdtMIME = new Blob([JSON.stringify(WebApp.initDataUnsafe)], {type: "text/plain"});
     const url = URL.createObjectURL(blobdtMIME);
     const lnk = document.createElement('a');
     lnk.setAttribute('download', 'initDataUnsafe');
