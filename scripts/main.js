@@ -7,12 +7,21 @@ console.log(window.WebApp);
 const mainButton = document.querySelector('#main-button');
 const textElement = document.querySelector('.mma-promo-description > p');
 
+const featBtnElementA = document.querySelector('#feature-a');
+const featBtnElementB = document.querySelector('#feature-b');
+const featBtnElementC = document.querySelector('#feature-c');
+
 const mainButtonClickCallback = async (e) => {
     textElement.style.color = 'rgba(100, 50, 0, 1)';
     textElement.textContent = platform;
-    await WebApp.ScreenCapture.disableScreenCapture();
-    await WebApp.requestScreenMaxBrightness();
-    window.WebApp.requestContact();
+    // window.WebApp.close();
+};
+
+const featBtnACallback = (e) => {
+    const strData = `${WebApp.initDataUnsafe}`;
+    alert(strData);
 };
 
 mainButton.addEventListener('click', mainButtonClickCallback);
+
+featBtnElementA.addEventListener('click', featBtnACallback);

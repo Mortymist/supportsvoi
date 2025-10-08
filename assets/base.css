@@ -13,6 +13,7 @@
     --green: rgba(184, 196, 169, 1);
 
     --turquoise: rgba(111, 164, 175, 1);
+    --turquoise-active: rgba(97, 144, 153, 1);
 }
 
 body, h1, h2, h3, p {
