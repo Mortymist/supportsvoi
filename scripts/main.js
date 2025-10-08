@@ -28,6 +28,14 @@ const featBtnACallback = (e) => {
     alert(strData);
 };
 
+const featBtnBCallback = (e) => {
+    if(WebApp.ScreenCapture.isScreenCaptureEnabled) {
+        WebApp.ScreenCapture.disableScreenCapture();
+    } else {
+        WebApp.ScreenCapture.enableScreenCapture();
+    }
+};
+
 mainButton.addEventListener('click', mainButtonClickCallback);
 
 featBtnElementA.addEventListener('click', featBtnACallback);
