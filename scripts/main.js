@@ -28,14 +28,14 @@ const featBtnACallback = (e) => {
 };
 
 const featBtnBCallback = (e) => {
-    // if(WebApp.ScreenCapture.isScreenCaptureEnabled) {
-    //     WebApp.ScreenCapture.disableScreenCapture();
-    //     alert(WebApp.ScreenCapture.isScreenCaptureEnabled);
-    // } else {
-    //     WebApp.ScreenCapture.enableScreenCapture();
-    //     alert(WebApp.ScreenCapture.isScreenCaptureEnabled);
-    // }
-    alert(WebApp.platform);
+    if(WebApp.ScreenCapture.isScreenCaptureEnabled) {
+        WebApp.ScreenCapture.disableScreenCapture();
+        alert(WebApp.ScreenCapture.isScreenCaptureEnabled);
+    } else {
+        WebApp.ScreenCapture.enableScreenCapture();
+        alert(WebApp.ScreenCapture.isScreenCaptureEnabled);
+    }
+    // alert(WebApp.platform);
 };
 
 mainButton.addEventListener('click', mainButtonClickCallback);
