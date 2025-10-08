@@ -39,3 +39,4 @@ const featBtnBCallback = (e) => {
 mainButton.addEventListener('click', mainButtonClickCallback);
 
 featBtnElementA.addEventListener('click', featBtnACallback);
+featBtnElementB.addEventListener('click', featBtnBCallback);
