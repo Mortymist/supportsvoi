@@ -8,7 +8,7 @@ const textElement = document.querySelector('.mma-promo-description > p');
 const mainButtonClickCallback = (e) => {
     textElement.style.color = 'rgba(100, 50, 0, 1)';
     textElement.textContent = platform;
-    window.WebApp.close();
+    window.WebApp.requestContact();
 };
 
 mainButton.addEventListener('click', mainButtonClickCallback);
