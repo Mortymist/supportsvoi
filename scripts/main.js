@@ -1,7 +1,6 @@
 const { BackButton, platform } = window.WebApp;
-BackButton.visible = true;
 console.log(window.WebApp);
-
+WebApp.enableClosingConfirmation();
 
 
 const mainButton = document.querySelector('#main-button');
