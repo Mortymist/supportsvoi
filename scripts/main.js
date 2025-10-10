@@ -7,7 +7,6 @@ try {
 } catch(e) {}
 
 WebApp.enableClosingConfirmation();
-WebApp.BackButton.hide();
 
 const mainButton = document.querySelector('#main-button');
 const textElement = document.querySelector('.mma-promo-description > p');
@@ -37,7 +36,11 @@ const featBtnBCallback = (e) => {
 };
 
 const featBtnCCallback = (e) => {
-    WebApp.BackButton.show();
+    if(WebApp.BackButton.isVisible) {
+        WebApp.BackButton.hide();
+    } else {
+        WebApp.BackButton.show();
+    };
 };
 
 mainButton.addEventListener('click', mainButtonClickCallback);
