@@ -7,7 +7,7 @@ try {
 } catch(e) {}
 
 WebApp.enableClosingConfirmation();
-
+WebApp.BackButton.hide();
 
 const mainButton = document.querySelector('#main-button');
 const textElement = document.querySelector('.mma-promo-description > p');
@@ -28,21 +28,20 @@ const featBtnACallback = (e) => {
     const data = WebApp.initData;
     const strData = JSON.stringify(data);
 
-    alert(strData);
+    alert(userInfo);
 };
 
 const featBtnBCallback = (e) => {
-    if(WebApp.ScreenCapture.isScreenCaptureEnabled) {
-        WebApp.ScreenCapture.disableScreenCapture();
-        alert(WebApp.ScreenCapture.isScreenCaptureEnabled);
-    } else {
-        WebApp.ScreenCapture.enableScreenCapture();
-        alert(WebApp.ScreenCapture.isScreenCaptureEnabled);
-    }
+    WebApp.requestContact();
     // alert(WebApp.platform);
+};
+
+const featBtnCCallback = (e) => {
+    WebApp.BackButton.show();
 };
 
 mainButton.addEventListener('click', mainButtonClickCallback);
 
 featBtnElementA.addEventListener('click', featBtnACallback);
 featBtnElementB.addEventListener('click', featBtnBCallback);
+featBtnElementC.addEventListener('click', featBtnCCallback);
