@@ -1,7 +1,11 @@
 const { BackButton, platform } = window.WebApp;
 console.log(window.WebApp);
-console.log(WebAppData);
-console.log(WebAppStartParam);
+
+try {
+    console.log(WebAppData);
+    console.log(WebAppStartParam);
+} catch(e) {}
+
 WebApp.enableClosingConfirmation();
 
 
