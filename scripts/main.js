@@ -1,5 +1,7 @@
 const { BackButton, platform } = window.WebApp;
 console.log(window.WebApp);
+console.log(WebAppData);
+console.log(WebAppStartParam);
 WebApp.enableClosingConfirmation();
 
 
@@ -11,9 +13,7 @@ const featBtnElementB = document.querySelector('#feature-b');
 const featBtnElementC = document.querySelector('#feature-c');
 
 const mainButtonClickCallback = async (e) => {
-    textElement.style.color = 'rgba(100, 50, 0, 1)';
-    textElement.textContent = platform;
-    // window.WebApp.close();
+    textElement.textContent = 'Ваша платформа: ' + platform;
 };
 
 const featBtnACallback = (e) => {
